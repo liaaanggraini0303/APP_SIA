@@ -8,7 +8,7 @@ if(!isset($_GET['modul'])){
         <ul class="nav nav-pills flex-column ms-2">
              <li class="nav-item">
                 <a href="dashboard.php" class="nav-link text-white <?= $modul; ?>">
-                <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                <i class="bi bi-speedometer2 me-2"></i>Dasboard
              </a>
             </li>
             <li class="nav-item">

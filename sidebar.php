@@ -8,14 +8,14 @@ if(!isset($_GET['modul'])){
         <ul class="nav nav-pills flex-column ms-2">
              <li class="nav-item">
                 <a href="dashboard.php" class="nav-link text-white <?= $modul; ?>">
-                <i class="bi bi-speedometer2 me-2"></i>Dasboard
+                <i class="bi bi-speedometer2 me-2"></i>Dashboard
              </a>
             </li>
             <li class="nav-item">
-                <a href= "?modulakun" class="nav-link text-white <?= $modul=='akun'?'active':''; ?>"> 
-                <i class="bi bi-database-fill-gear me-2"></i></i>Data Akun
-             </a>
-            </li>
+        <a href="?modul=akun" class="nav-link text-white <?= $active_akun;?>">
+            <i class="bi bi-cash-stack me-2"></i>Data Akun
+        </a>
+    </li>
             <li class="nav-item">
                 <a href="#transaksiCollapse" data-bs-toggle="collapse" aria-expanded="false" class="nav-link d-flex text-white">
         <i class="bi bi-cash-stack me-2"></i>

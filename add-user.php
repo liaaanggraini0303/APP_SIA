@@ -1,7 +1,7 @@
 <?php
 include_once "koneksi.php";
-$password = password_hash('123', PASSWORD_BCRYPT);
-$query = "INSERT INTO tbl_pengguna (
+$password = password_hash('1234', PASSWORD_BCRYPT);
+$query = "INSERT INTO tb_pengguna (
     username,
     password,
     nama_lengkap,
@@ -10,7 +10,7 @@ $query = "INSERT INTO tbl_pengguna (
     hak_akses
     )
     VALUES (
-        'admin',
+        'coba',
         '$password',
         'Administrator Web',
         'admin@gmail.com',

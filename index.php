@@ -26,7 +26,7 @@ if(isset($_SESSION['username'])){
  if(isset($_SESSION['pesan'])){
     ?>
     <div class="alert alert-danger"><?= $_SESSION['pesan'];?></div>
-    <?php
+    <?php 
     }
     ?>
  <hr>

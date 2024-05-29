@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('location: index.php');
+}else{
+    include_once('koneksi.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +43,11 @@
                                             Profile
                                         </a>
                                     </li>
+                                        <a class="dropdown-item" href="logout.php">
+                                            <i class="bi bi-door-closed-fill"></i>
+                                            logout
+                                        <a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -55,3 +67,7 @@ crossorigin="anonymous"></script>
 
 </body>
 </html>
+
+<?php
+}
+?>

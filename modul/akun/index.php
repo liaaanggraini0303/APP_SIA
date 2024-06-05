@@ -1,6 +1,7 @@
 <div class="card mb-3">
     <div class="card-body">
-        <form action="" method="post">
+        <form action="modul/akun/aksi_akun.php?act=insert" method="post">
+        </from>
             <div class="row mb-3">
                 <div class="col-md-4">
                     <label class="form-label" for="nama_akun">Nama akun</label>
@@ -43,17 +44,37 @@
                         <th><i class="bi bi-gear-fill"></i></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody> 
+
+                <?php
+                $query = "SELECT * from tbl_akun";
+                $exec = mysqli_query($koneksi, $query);
+                $no = 1;
+                while($data = mysqli_fetch_array($exec)){
+                    
+                }
+                ?>
                     <tr>
-                        <td>1</td>
-                        <td>Kas</td>
-                        <td>Aset</td>
-                        <td>Debit</td>
+                    <td><?= $no++ ?></td>
+                    <td><?= $data['nama_akun'] ?></td>
+                    <td><?= $data['jenis_akun'] ?></td>
+                    <td><?= $data['type_saldo'] ?></td>
+                    <td>
+                    <a href="#editAkun<?= $data['id'] ?>" class="text-decoration-none"data-bs-toggle="modal">
+                    <i class="bi bi-pencil-square text-success"></i>
+                    </a>
+                
+                    ?>
+                    <tr>
+                        <td><?= $no++ ?></td>
+                        <td><?= $data['nama_akun'] ?></td>
+                        <td><?= $data['jenis_akun'] ?></td>
+                        <td><?= $data['type_saldo'] ?></td>
                         <td>
-                            <a href="#editAkun" class="text-decoration-none" data-bs-toggle="modal">
+                            <a href="#editAkun<?= $data['id'] ?>" class="text-decoration-none" data-bs-toggle="modal">
                                 <i class="bi bi-pencil-square text-success"></i>
                             </a>
-                            <a href="" class="text-decoration-none">
+                            <a href="modul/akun/aksi_akun.php?act=delete&id=<?= $data['id'] ?>" class="text-decoration-none">
                                 <i class="bi bi-trash text-danger"></i>
                             </a>
                         </td>

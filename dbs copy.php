@@ -27,6 +27,41 @@
                 <div class="text-center pt-4">
                     <i class="bi bi-cash-coin fs-1 text-success"></i>
                     <h3>Sistem Informasi Akuntansi</h3>
+<<<<<<< HEAD
+                    <hr>
+                    </div>
+                    <?php
+                    include_once('sidebar.php');
+                    ?>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="text-end p-3">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle"></i>
+                                    Administrator
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="?modul=profile">
+                                            <i class="bi bi-person-badge-fill"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                        <a class="dropdown-item" href="logout.php">
+                                            <i class="bi bi-door-closed-fill"></i>
+                                            logout
+                                        <a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <?php
+                            include_once('media.php');
+                            ?>
+                        </div>
+                    </div>
                 </div >
                 <div class="pt-4">
                 <?php
@@ -68,7 +103,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
-</html>
+</html
+
 <?php
-    }
+}
 ?>

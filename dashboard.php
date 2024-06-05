@@ -27,7 +27,6 @@
                 <div class="text-center pt-4">
                     <i class="bi bi-cash-coin fs-1 text-success"></i>
                     <h3>Sistem Informasi Akuntansi</h3>
-<<<<<<< HEAD
                     <hr>
                     </div>
                     <?php

@@ -1,6 +1,6 @@
 <?php
 
-    $query = "SELECT * FROM tbl_pengguna WHERE username='$_SESSION[username]'";
+    $query = "SELECT * FROM tb_pengguna WHERE username='$_SESSION[username]'";
     $exec = mysqli_query($koneksi, $query);
     $data = mysqli_fetch_array($exec);
 ?>

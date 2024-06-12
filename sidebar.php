@@ -67,6 +67,9 @@ $hak_akses = isset($_SESSION['hak_akses']) ? $_SESSION['hak_akses'] : '';
                 <li class="nav-item">
                     <a href="?modul=suplier" class="nav-link text-dark text-decoration-none <?= $modul === 'suplier' ? 'active' : ''; ?>">Suplier</a>
                 </li>
+                <li class="nav-item">
+                    <a href="?modul=pengguna" class="nav-link text-dark text-decoration-none <?= $modul === 'pengguna' ? 'active' : ''; ?>">Pengguna</a>
+                </li>
             </ul>
         </li>
     <?php endif; ?>

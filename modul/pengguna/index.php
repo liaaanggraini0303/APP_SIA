@@ -1,7 +1,3 @@
-<?php
-// Kode PHP untuk file pengguna.php
-?>
-
 <div class="card mb-3">
     <div class="card-body">
         <form action="" method="post">
@@ -16,7 +12,7 @@
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="col md-6">
-                <label for="nama_pengguna" class="form-label">Nama Pengguna</label>
+                <label for="nama_pengguna" class="form-label">Level</label>
                 <input type="text" class="form-control" id="nama_pengguna" name="nama_pengguna" required>
             </div>
             <div class="col md-6">
@@ -38,6 +34,7 @@
             </div>
             <hr class="text-secondary">
             <div class="text-end">
+                
                 <button type="reset" class="btn btn-secondary">Reset</button>
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>

@@ -25,11 +25,7 @@ $hak_akses = isset($_SESSION['hak_akses']) ? $_SESSION['hak_akses'] : '';
     </li>
 
     <?php if ($hak_akses == 'admin' || $hak_akses == 'pimpinan') : ?>
-        <li class="nav-item">
-            <a href="?modul=pengguna" class="nav-link text-white <?= $modul === 'pengguna' ? 'active' : ''; ?>">
-                <i class="bi bi-person-fill me-2"></i>Pengguna
-            </a>
-        </li>
+      
     <?php endif; ?>
 
     <?php if ($hak_akses == 'admin' || $hak_akses == 'karyawan') : ?>

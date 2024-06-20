@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once($SERVER['DOCUMENT_ROOT'] . "/app_sia/koneksi.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/app_sia/koneksi.php");
 
 $koneksi = mysqli_connect("localhost", "root", "", "app_sia");
 
@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $type_saldo = $_POST['type_saldo'];
 
     if ($_GET['act'] == "insert") {
-        $query = "INSERT INTO akun (nama_akun, jenis_akun, type_saldo) VALUES ('$nama_akun', '$jenis_akun', '$type_saldo')";
+        $query = "INSERT INTO tb_akun (nama_akun, jenis_akun, type_saldo) VALUES ('$nama_akun', '$jenis_akun', '$type_saldo')";
         $exec = mysqli_query($koneksi, $query);
 
         if ($exec) {
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('location:../../dashboard.php?modul=akun');
     } elseif ($_GET['act'] == "update") {
         $id = $_GET['id'];
-        $query = "UPDATE akun SET nama_akun='$nama_akun', jenis_akun='$jenis_akun', type_saldo='$type_saldo' WHERE akun_id='$id'";
+        $query = "UPDATE tb_akun SET nama_akun='$nama_akun', jenis_akun='$jenis_akun', type_saldo='$type_saldo' WHERE akun_id='$id'";
         $exec = mysqli_query($koneksi, $query);
 
         if ($exec) {
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } elseif ($_GET['act'] == "delete") {
     $id = $_GET['id'];
-    $query = "DELETE FROM akun WHERE akun_id='$id'";
+    $query = "DELETE FROM tb_akun WHERE akun_id='$id'";
     $exec = mysqli_query($koneksi, $query);
 
     if ($exec) {
